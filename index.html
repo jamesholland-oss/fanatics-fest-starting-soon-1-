@@ -328,8 +328,7 @@ h1 .accent { color: var(--holo-blue-b); }
 
   <section class="count">
     <div class="count-label" id="countLabel">Going live in</div>
-    <div class="timer" id="timer">05:00</div>
-    <div class="progress"><div id="progress"></div></div>
+    <div class="timer" id="timer">12:00 PM</div>
   </section>
 
   <section class="info">
@@ -376,21 +375,33 @@ const CONFIG = {
   mainCamLabel: "MAIN FLOOR",
   packCamLabel: "PACK CAM",
 
-  countLabel: "GOING LIVE IN",
-  countdownMinutes: 10,
+  countLabel: "GOING LIVE AT",
+  goLiveTime: "12:00 PM",
+  
 
   location: "FANATICS FEST NYC",
   onDeck: "LIVE BREAKS, RARE PULLS<br>& PACK REVEALS",
 
   microText: "PREMIUM COLLECTIBLES.<br>LIVE ENERGY.<br>ONLY ON SWISH.",
 
-  tickerItems: [
-    "SPORTS CARDS",
-    "POKÉMON",
-    "RARE PULLS",
-    "LIVE BREAKS",
-    "FANATICS FEST NYC"
-  ]
+ tickerItems: [
+  {
+    logo: "./assets/whatnot.png",
+    text: "@swishbreaks"
+  },
+  {
+    logo: "./assets/tiktok.png",
+    text: "@swishbreaks"
+  },
+  {
+    logo: "./assets/instagram.png",
+    text: "@swishbreaks"
+  },
+  {
+    logo: "./assets/fanatics.png",
+    text: "Fanatics Live"
+  }
+]
 };
 
 /* =========================================================
@@ -418,6 +429,7 @@ setText("deckText", CONFIG.deck);
 setText("mainCamLabel", CONFIG.mainCamLabel);
 setText("packCamLabel", CONFIG.packCamLabel);
 setText("countLabel", CONFIG.countLabel);
+setText("timer", CONFIG.goLiveTime);
 setText("locationText", CONFIG.location);
 setText("onDeckText", CONFIG.onDeck, true);
 setText("microText", CONFIG.microText, true);
