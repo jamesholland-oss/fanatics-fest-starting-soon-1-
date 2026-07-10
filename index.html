@@ -24,15 +24,16 @@ html, body {
   font-family: var(--font);
   color: var(--liminal-white);
 }
-.stage {
+..stage {
   position: relative;
   width: 1080px;
   height: 1920px;
   overflow: hidden;
+
   background:
-radial-gradient(circle at 50% 0%, rgba(0,127,253,.28), transparent 45%),
-radial-gradient(circle at 100% 90%, rgba(3,234,255,.12), transparent 35%),
-linear-gradient(180deg,#08111d 0%,#111827 45%,#181818 100%);
+    linear-gradient(rgba(5, 10, 18, 0.20), rgba(5, 10, 18, 0.20)),
+    url("./assets/background.png") center center / cover no-repeat;
+
 }
 .stage::before {
   content: "";
@@ -42,7 +43,7 @@ linear-gradient(180deg,#08111d 0%,#111827 45%,#181818 100%);
   background-image:
     linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
-  background-size: 64px 64px;
+  background-size: cover;
 }
 
 /* <-- Put the new block HERE */
