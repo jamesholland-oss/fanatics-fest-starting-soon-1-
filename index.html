@@ -30,19 +30,35 @@ html, body {
   height: 1920px;
   overflow: hidden;
   background:
-    radial-gradient(circle at 52% 8%, rgba(0,127,253,.11), transparent 31%),
-    radial-gradient(circle at 90% 80%, rgba(3,234,255,.045), transparent 24%),
-    linear-gradient(180deg, #090909 0%, #111111 52%, #171717 100%);
+radial-gradient(circle at 50% 0%, rgba(0,127,253,.28), transparent 45%),
+radial-gradient(circle at 100% 90%, rgba(3,234,255,.12), transparent 35%),
+linear-gradient(180deg,#08111d 0%,#111827 45%,#181818 100%);
 }
 .stage::before {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: .09;
+  opacity: .18;
   background-image:
     linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
   background-size: 64px 64px;
+}
+
+/* <-- Put the new block HERE */
+
+.stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,.05), transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(3,234,255,.05), transparent 25%);
+
+    mix-blend-mode: screen;
+    opacity: .55;
 }
 .topline {
   position: absolute;
@@ -360,7 +376,7 @@ const CONFIG = {
   packCamLabel: "PACK CAM",
 
   countLabel: "GOING LIVE IN",
-  countdownMinutes: 5,
+  countdownMinutes: 10,
 
   location: "FANATICS FEST NYC",
   onDeck: "LIVE BREAKS, RARE PULLS<br>& PACK REVEALS",
