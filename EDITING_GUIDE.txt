@@ -1,0 +1,62 @@
+FANATICS FEST V2 — EASY EDIT GUIDE
+
+WHY THE FONT LOOKED LIKE IMPACT
+The design used Inter Black, which is a very heavy weight and can resemble Impact.
+This new version lets you change the font family from one setting.
+
+HOW TO EDIT THE FILE
+
+1. Download and unzip the package.
+2. Open Visual Studio Code.
+3. Click File > Open File.
+4. Select:
+   fanatics_fest_starting_soon_v2_easy_edit.html
+5. Press Command+F on Mac or Control+F on Windows.
+6. Search for:
+   EASY EDIT SETTINGS
+7. Change only the text between quotation marks.
+
+FONT EXAMPLES
+
+fontFamily: "Inter",
+fontFamily: "Arial",
+fontFamily: "Helvetica",
+fontFamily: "Georgia",
+
+IMPORTANT
+A font must be installed on the computer running OBS.
+If OBS cannot find the font, it will use Arial or Helvetica as a fallback.
+
+CHANGE THE COUNTDOWN
+
+countdownMinutes: 5,
+
+Change 5 to any whole number.
+
+CHANGE THE TITLE
+
+titleLine1: "STREAM",
+titleLine2: "STARTING SOON",
+
+CHANGE THE TICKER
+
+tickerItems: [
+  "SPORTS CARDS",
+  "POKÉMON",
+  "RARE PULLS",
+  "LIVE BREAKS",
+  "FANATICS FEST NYC"
+]
+
+Keep quotation marks and commas in place.
+
+SAVE AND UPDATE OBS
+
+1. Save the file in VS Code.
+2. In OBS, select the Browser Source.
+3. Click Refresh cache of current page.
+4. The updated text and font should appear.
+
+OBS SIZE
+Width: 1080
+Height: 1920

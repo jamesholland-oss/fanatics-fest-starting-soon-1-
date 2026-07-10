@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080,height=1920,initial-scale=1.0">
+<title>Swish — Fanatics Fest 2026 Starting Soon V2</title>
+<style>
+:root {
+  --space-black: #1A1A1A;
+  --liminal-white: #EEEEEE;
+  --holo-blue-a: #007FFD;
+  --holo-blue-b: #03EAFF;
+  --static-grey: #C1C1C1;
+  --pure-energy: #B5FF00;
+  --font: 'Inter', Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  background: transparent;
+  font-family: var(--font);
+  color: var(--liminal-white);
+}
+.stage {
+  position: relative;
+  width: 1080px;
+  height: 1920px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 52% 8%, rgba(0,127,253,.11), transparent 31%),
+    radial-gradient(circle at 90% 80%, rgba(3,234,255,.045), transparent 24%),
+    linear-gradient(180deg, #090909 0%, #111111 52%, #171717 100%);
+}
+.stage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .09;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.topline {
+  position: absolute;
+  top: 54px;
+  left: 54px;
+  right: 54px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 4;
+}
+.brand {
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: .22em;
+}
+.rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(238,238,238,.28), rgba(3,234,255,.28), transparent);
+}
+.code {
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: .18em;
+  color: rgba(193,193,193,.78);
+}
+.header {
+  position: absolute;
+  left: 54px;
+  right: 54px;
+  top: 108px;
+  z-index: 4;
+}
+.event {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--static-grey);
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+.event .marker {
+  width: 34px;
+  height: 3px;
+  background: var(--holo-blue-b);
+}
+h1 {
+  margin: 18px 0 0;
+  font-size: 95px;
+  line-height: .91;
+  letter-spacing: -.06em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+h1 span { display:block; }
+h1 .accent { color: var(--holo-blue-b); }
+.deck {
+  margin-top: 18px;
+  color: rgba(193,193,193,.86);
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.camera {
+  position: absolute;
+  z-index: 3;
+}
+.camera::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border:1px solid rgba(238,238,238,.36);
+  border-radius: 10px;
+  pointer-events:none;
+}
+.camera::after {
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:84px;
+  height:2px;
+  background: linear-gradient(90deg,var(--holo-blue-b),transparent);
+}
+.camera .inner {
+  position:absolute;
+  inset:2px;
+  border-radius:8px;
+  background:transparent;
+  overflow:hidden;
+}
+.camera .label {
+  position:absolute;
+  left:16px;
+  top:16px;
+  z-index:2;
+  padding:8px 11px 7px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:4px;
+  background:rgba(10,10,10,.78);
+  backdrop-filter: blur(6px);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.camera .label::before {
+  content:"";
+  display:inline-block;
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  margin-right:9px;
+  background:var(--pure-energy);
+  box-shadow:0 0 8px rgba(181,255,0,.65);
+}
+.wide { left:54px; top:438px; width:972px; height:548px; }
+.card { left:666px; top:1030px; width:360px; height:640px; }
+
+.count {
+  position:absolute;
+  left:54px;
+  top:1054px;
+  width:560px;
+  z-index:4;
+}
+.count-label {
+  color:rgba(193,193,193,.84);
+  font-size:17px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.timer {
+  margin-top:6px;
+  font-size:124px;
+  line-height:.95;
+  font-weight:900;
+  letter-spacing:-.06em;
+  font-variant-numeric: tabular-nums;
+}
+.progress {
+  margin-top:22px;
+  width:460px;
+  height:3px;
+  background:rgba(255,255,255,.11);
+}
+.progress > div {
+  width:100%;
+  height:100%;
+  transform-origin:left center;
+  background:linear-gradient(90deg,var(--holo-blue-a),var(--holo-blue-b));
+}
+.info {
+  position:absolute;
+  left:54px;
+  top:1374px;
+  width:560px;
+  z-index:4;
+}
+.info-row {
+  padding:20px 0 21px;
+  border-top:1px solid rgba(255,255,255,.09);
+}
+.info-row:last-child { border-bottom:1px solid rgba(255,255,255,.09); }
+.info-label {
+  color:rgba(193,193,193,.74);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.17em;
+  text-transform:uppercase;
+}
+.info-value {
+  margin-top:7px;
+  color:var(--liminal-white);
+  font-size:27px;
+  font-weight:800;
+  line-height:1.12;
+  letter-spacing:-.02em;
+}
+.micro {
+  position:absolute;
+  right:54px;
+  top:1716px;
+  width:360px;
+  text-align:right;
+  z-index:4;
+  color:rgba(193,193,193,.52);
+  font-size:14px;
+  font-weight:700;
+  line-height:1.55;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.ticker {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:104px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:rgba(8,8,8,.96);
+  z-index:5;
+}
+.track {
+  display:flex;
+  width:max-content;
+  white-space:nowrap;
+  animation:ticker 24s linear infinite;
+}
+.item {
+  display:inline-flex;
+  align-items:center;
+  gap:22px;
+  padding-right:46px;
+  color:rgba(238,238,238,.84);
+  font-size:19px;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.item i {
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--holo-blue-b);
+}
+@keyframes ticker {
+  from { transform:translateX(0); }
+  to { transform:translateX(-50%); }
+}
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="topline">
+    <div class="brand" id="brandText">SWISH</div>
+    <div class="rule"></div>
+    <div class="code" id="topCode">NYC / 2026</div>
+  </div>
+
+  <section class="header">
+    <div class="event"><span class="marker"></span><span id="eventText">Fanatics Fest 2026</span></div>
+    <h1>
+      <span id="titleLine1">Stream</span>
+      <span class="accent" id="titleLine2">Starting Soon</span>
+    </h1>
+    <div class="deck" id="deckText">New York City / Live from the floor</div>
+  </section>
+
+  <!-- Place your 16:9 wide camera source below this browser source in OBS -->
+  <section class="camera wide">
+    <div class="inner"></div>
+    <div class="label" id="mainCamLabel">Main Floor</div>
+  </section>
+
+  <section class="count">
+    <div class="count-label" id="countLabel">Going live in</div>
+    <div class="timer" id="timer">05:00</div>
+    <div class="progress"><div id="progress"></div></div>
+  </section>
+
+  <section class="info">
+    <div class="info-row">
+      <div class="info-label">Location</div>
+      <div class="info-value" id="locationText">Fanatics Fest NYC</div>
+    </div>
+    <div class="info-row">
+      <div class="info-label">On deck</div>
+      <div class="info-value" id="onDeckText">Live breaks, rare pulls<br>&amp; pack reveals</div>
+    </div>
+  </section>
+
+  <!-- Place your 9:16 card camera source below this browser source in OBS -->
+  <section class="camera card">
+    <div class="inner"></div>
+    <div class="label" id="packCamLabel">Pack Cam</div>
+  </section>
+
+  <div class="micro" id="microText">Premium collectibles.<br>Live energy.<br>Only on Swish.</div>
+
+  <div class="ticker">
+    <div class="track" id="tickerTrack"></div>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   EASY EDIT SETTINGS
+   Only change the values between quotation marks below.
+   ========================================================= */
+
+const CONFIG = {
+  fontFamily: "Inter", // Examples: Inter, Arial, Helvetica, Georgia
+
+  brand: "SWISH",
+  topCode: "NYC / 2026",
+  event: "FANATICS FEST 2026",
+
+  titleLine1: "STREAM",
+  titleLine2: "STARTING SOON",
+  deck: "NEW YORK CITY / LIVE FROM THE FLOOR",
+
+  mainCamLabel: "MAIN FLOOR",
+  packCamLabel: "PACK CAM",
+
+  countLabel: "GOING LIVE IN",
+  countdownMinutes: 5,
+
+  location: "FANATICS FEST NYC",
+  onDeck: "LIVE BREAKS, RARE PULLS<br>& PACK REVEALS",
+
+  microText: "PREMIUM COLLECTIBLES.<br>LIVE ENERGY.<br>ONLY ON SWISH.",
+
+  tickerItems: [
+    "SPORTS CARDS",
+    "POKÉMON",
+    "RARE PULLS",
+    "LIVE BREAKS",
+    "FANATICS FEST NYC"
+  ]
+};
+
+/* =========================================================
+   DO NOT EDIT BELOW THIS LINE UNLESS YOU WANT TO CODE
+   ========================================================= */
+
+document.documentElement.style.setProperty(
+  "--font",
+  `"${CONFIG.fontFamily}", Arial, Helvetica, sans-serif`
+);
+
+const setText = (id, value, html = false) => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  if (html) el.innerHTML = value;
+  else el.textContent = value;
+};
+
+setText("brandText", CONFIG.brand);
+setText("topCode", CONFIG.topCode);
+setText("eventText", CONFIG.event);
+setText("titleLine1", CONFIG.titleLine1);
+setText("titleLine2", CONFIG.titleLine2);
+setText("deckText", CONFIG.deck);
+setText("mainCamLabel", CONFIG.mainCamLabel);
+setText("packCamLabel", CONFIG.packCamLabel);
+setText("countLabel", CONFIG.countLabel);
+setText("locationText", CONFIG.location);
+setText("onDeckText", CONFIG.onDeck, true);
+setText("microText", CONFIG.microText, true);
+
+const tickerTrack = document.getElementById("tickerTrack");
+const repeatedItems = [...CONFIG.tickerItems, ...CONFIG.tickerItems];
+tickerTrack.innerHTML = repeatedItems
+  .map(item => `<span class="item"><i></i>${item}</span>`)
+  .join("");
+
+const params = new URLSearchParams(window.location.search);
+const total = Math.max(
+  1,
+  parseInt(params.get("seconds") || "", 10) ||
+  ((parseInt(params.get("minutes") || String(CONFIG.countdownMinutes), 10) || CONFIG.countdownMinutes) * 60)
+);
+
+const loop = params.get("loop") === "1";
+let remaining = total;
+const timer = document.getElementById("timer");
+const progress = document.getElementById("progress");
+
+function render() {
+  const m = Math.floor(remaining / 60);
+  const s = remaining % 60;
+
+  timer.textContent = remaining > 0
+    ? `${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`
+    : "LIVE";
+
+  progress.style.transform = `scaleX(${remaining > 0 ? remaining / total : 1})`;
+
+  if (remaining <= 0) {
+    if (loop) remaining = total;
+    return;
+  }
+
+  remaining -= 1;
+}
+
+render();
+setInterval(render, 1000);
+</script>
+</body>
+</html>
