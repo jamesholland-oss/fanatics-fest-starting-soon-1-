@@ -9,7 +9,6 @@ const CONFIG = {
   titleLine1: "STREAM",
   titleLine2: "STARTING SOON",
   deck: "",
-<!-- write in deck if you want words -->
 
   mainCamLabel: "MAIN FLOOR",
   packCamLabel: "PACK CAM",
