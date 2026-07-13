@@ -99,7 +99,7 @@ h1 .accent { color:var(--holo-blue-b); }
   border-radius:50%; background:var(--pure-energy);
   box-shadow:0 0 8px rgba(181,255,0,.65);
 }
-.wide { left:54px; top:438px; width:972px; height:548px; }
+.wide { left:54px; top:438px; width:972px; height:800px; }
 .card { left:666px; top:1030px; width:360px; height:640px; }
 .count { position:absolute; left:54px; top:1054px; width:560px; }
 .count-label {
