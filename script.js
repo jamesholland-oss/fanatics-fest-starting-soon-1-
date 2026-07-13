@@ -7,7 +7,7 @@ const CONFIG = {
   event: "FANATICS FEST 2026",
 
   titleLine1: "STREAM",
-  titleLine2: "STARTING SOON",
+  titleLine2: "",
   deck: "",
 
   mainCamLabel: "MAIN FLOOR",
