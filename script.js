@@ -6,7 +6,7 @@ const CONFIG = {
   topCode: "NYC / 2026",
   event: "FANATICS FEST 2026",
 
-  titleLine1: "STREAM",
+  titleLine1: "",
   titleLine2: "",
   deck: "",
 
