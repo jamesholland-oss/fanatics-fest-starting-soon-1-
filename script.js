@@ -14,7 +14,7 @@ const CONFIG = {
   packCamLabel: "PACK CAM",
 
   countLabel: "GOING LIVE AT",
-  goLiveTime: "12:30 PM",
+  goLiveTime: "12:00 PM",
 
   location: "FANATICS FEST NYC",
   onDeck: "LIVE BREAKS, RARE PULLS<br>& PACK REVEALS",
